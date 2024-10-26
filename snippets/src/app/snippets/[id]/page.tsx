@@ -14,8 +14,6 @@ interface ShowSnippetPageProps {
 
 export default async function ShowSnippetPage(props: ShowSnippetPageProps) {
 
-  await new Promise((resolve) => setTimeout(resolve, 777));
-
   const snippet = await db.snippet.findUnique({
     where: {
       id: parseInt(props.params.id),
